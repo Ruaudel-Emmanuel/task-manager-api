@@ -1,0 +1,23 @@
+# 1. Cloner/télécharger le projet
+
+# 2. Créer l'environnement virtuel
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou
+venv\Scripts\activate  # Windows
+
+# 3. Installer les dépendances
+pip install -r requirements.txt
+
+# 4. Configurer l'environnement
+cp .env.example .env
+
+# 5. Initialiser la base de données
+python scripts/init_db.py
+
+# 6. Lancer le projet (méthode simple)
+python start.py
+
+# OU manuellement:
+# Terminal 1: uvicorn main:app --reload
+# Terminal 2: streamlit run client/streamlit_app.py

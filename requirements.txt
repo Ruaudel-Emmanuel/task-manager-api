@@ -1,0 +1,35 @@
+# Framework API REST moderne
+fastapi==0.115.6
+
+# Serveur ASGI pour FastAPI
+uvicorn[standard]==0.34.0
+
+# Interface client interactive
+streamlit==1.40.2
+
+# Validation de données (Pydantic V2)
+pydantic==2.10.4
+pydantic-settings==2.6.1
+
+# ORM pour la base de données
+sqlalchemy==2.0.36
+
+# Client HTTP asynchrone
+httpx==0.28.1
+
+# Variables d'environnement
+python-dotenv==1.0.1
+
+# Tests unitaires
+pytest==8.3.4
+pytest-cov==6.0.0
+
+# Gestion des dates
+python-dateutil==2.9.0.post0
+
+# Visualisation de données (pour Streamlit)
+plotly==5.24.1
+pandas==2.2.3
+
+# Sérialisation JSON améliorée
+orjson==3.10.12

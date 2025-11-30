@@ -1,0 +1,64 @@
+{
+  "app_name": "Task Manager API",
+  "version": "1.0.0",
+  "description": "API REST moderne pour la gestion de tâches avec FastAPI",
+  "author": "Emmanuel Ruaudel",
+  "license": "MIT",
+  
+  "database": {
+    "url": "sqlite:///./tasks.db",
+    "echo": false,
+    "pool_size": 5,
+    "max_overflow": 10
+  },
+  
+  "api": {
+    "prefix": "/api/v1",
+    "title": "Task Manager API",
+    "description": "API REST complète pour la gestion de tâches avec authentification et validation",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Emmanuel Ruaudel",
+      "email": "ruaudel.emmanuel@orange.fr",
+      "url": "https://github.com/Ruaudel-Emmanuel"
+    },
+    "license_info": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  
+  "cors": {
+    "allow_origins": [
+      "http://localhost:8501",
+      "http://127.0.0.1:8501",
+      "http://localhost:3000"
+    ],
+    "allow_credentials": true,
+    "allow_methods": ["*"],
+    "allow_headers": ["*"]
+  },
+  
+  "pagination": {
+    "default_limit": 20,
+    "max_limit": 100
+  },
+  
+  "task": {
+    "priorities": ["low", "medium", "high", "urgent"],
+    "statuses": ["todo", "in_progress", "completed", "cancelled"],
+    "default_priority": "medium",
+    "default_status": "todo"
+  },
+  
+  "security": {
+    "algorithm": "HS256",
+    "access_token_expire_minutes": 30
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "date_format": "%Y-%m-%d %H:%M:%S"
+  }
+}
